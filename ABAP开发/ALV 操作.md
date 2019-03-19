@@ -210,11 +210,15 @@ CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY_LVC'
 ```
 参数基与REUSE_ALV_GRID_DISPLAY本一致，不过由于这是REUSE_ALV_GRID_DISPLAY的改进版，有一些差别，其功能在一些方面也更强
 1. 类型名称优化(不用声明 SLIS 类型池)
+
   SLIS_LAYOUT_ALV => LVC_S_LAYO
+  
   SLIS_T_FIELDCAT => LVC_T_FCAT
+  
   SLIS_FIELDCAT   => LVC_S_FCAT
   ...
 2.设置**单元格编辑**属性
+
   内表ITAB中添加字段标识 field_styl TYPE lvc_t_styl.
   ```ABAP
   DATA: LT_STYL TYPE LVC_T_STYL,
@@ -233,13 +237,21 @@ CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY_LVC'
   ENDLOOP.
   ```
 3.对于F4帮助
+
 若某字段在参照某表的字段，且已存在搜索帮助，则可在设置列属性时设置其搜索帮助
+
 GS_FCAT-RET_TABLE = ''. "参考表
+
 GS_FCAT-RET_FIELD = ''. "参考字段
+
 APPEND GS_FCAT TO GT_FCAT.
+
 若自需要定义F4帮助，需先设置
+
 GS_FCAT-F4AVAILABL = 'X'.
+
 并设置EVENT[].
+
 
 
 
