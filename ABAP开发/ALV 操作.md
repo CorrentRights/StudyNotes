@@ -208,7 +208,7 @@ CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY_LVC'
    OTHERS                            = 2
           .
 ```
-参数基与REUSE_ALV_GRID_DISPLAY本一致，不过由于这是REUSE_ALV_GRID_DISPLAY的改进版，有一些差别，其功能在一些方面也更强
+参数与REUSE_ALV_GRID_DISPLAY基本一致，不过由于这是REUSE_ALV_GRID_DISPLAY的改进版，有一些差别，其功能在一些方面也更强
 1. 类型名称优化(不用声明 SLIS 类型池)
 
   SLIS_LAYOUT_ALV => LVC_S_LAYO
